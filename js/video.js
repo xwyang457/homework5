@@ -80,14 +80,14 @@ function muteVideo(){
 		muteButton.textContent = 'Unmute';
 		tempVolume = volumeSlider.value;
 		volumeSlider.value = 0;
-        volumeNumber.innerHTML = volumeSlider.value;
+        volumeNumber.innerHTML = volumeSlider.value + "%";
 	}
 	else if (video.muted === true){
 		video.muted = false;
 		muteButton.textContent = 'Mute';
 		volumeSlider.value = tempVolume;
-        volumeNumber.innerHTML = volumeSlider.value;
-        video.volume = tempVolume / 100;
+        volumeNumber.innerHTML = volumeSlider.value + "%";
+		video.volume = tempVolume / 100;
 	}
 }
 
